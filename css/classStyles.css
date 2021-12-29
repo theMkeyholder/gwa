@@ -10,3 +10,13 @@
 .layer{
     position: absolute;
 }
+.navButton{
+    border: 2px solid gray;
+    background-color: #000000;
+    font-family: DosisSemiBold;
+    font-size: 20px;
+    color: gray;
+    margin-left: 20px;
+    width: 300px;
+    height: 100px;
+}
