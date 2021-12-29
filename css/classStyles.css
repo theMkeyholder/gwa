@@ -1,0 +1,12 @@
+.flexBox {
+    display: flex;
+    align-items: center;
+    place-content:center
+}
+.generalTexts{
+    color: white;
+    font-family: DosisLight;
+}
+.layer{
+    position: absolute;
+}
