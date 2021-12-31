@@ -10,6 +10,7 @@ const subPages = []
 for (let i=0;i<42;i++){
     subPages[i] = document.getElementById(`subPage${i}`)
 }
+const nextButton = document.getElementById("nextButton")
 function switchPage(x){
     pages[currentPage].style.display = `none`
     previousPage = currentPage
@@ -23,6 +24,7 @@ function switchSubPage(x){
     currentSubPage = x
     for (let i=0;i<pages.length;i++){pages[i].style.display=`none`}
     subPages[currentSubPage].style.display = `flex`
+    nextButton.style.display = `inline`
 }
 function backPage(){
     if (currentPage!==0){
@@ -37,10 +39,19 @@ function backPage(){
             pages[currentPage].style.display = `flex`
             currentSubPage = 0
             for (let i=0;i<subPages.length;i++){subPages[i].style.display=`none`}
+            nextButton.style.display = `none`
         }
     }
+}
+function nextSubPage(){
+    subPages[currentSubPage].style.display = `none`
+    currentSubPage = currentSubPage+1
+    for (let i=0;i<pages.length;i++){pages[i].style.display=`none`}
+    subPages[currentSubPage].style.display = `flex`
+    nextButton.style.display = `inline`
 }
 window.onload = function(){
     for (let i=1;i<pages.length;i++){pages[i].style.display = `none`}
     for (let i=0;i<subPages.length;i++){subPages[i].style.display=`none`}
+    nextButton.style.display = `none`
 }
