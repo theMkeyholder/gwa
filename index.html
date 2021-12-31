@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="layer" id="topLayer">
+    <button class="navButton grow layer" id="backButton" style="width: 150px;height:50px" onclick="backPage()">Back</button>
     <div class="flexBox" id="page0" style="flex-direction: column;">
         <div class="flexBox" id="landingTextsContainer" style="flex-direction: column">
             <t class="generalTexts" id="landingText" style="margin-top:10px;font-family:DosisBold;font-size:20px">Welcome to The Official gwa Site!</t>
@@ -22,15 +23,17 @@
             <button class="navButton grow" id="historyNav" onclick="switchPage(2)">gwa History</button>
             <button class="navButton grow" id="gwaEUNav" onclick="switchPage(3)">gwa Expanded Universe</button>
         </div>
+        <div id="subPage0"></div>
     </div>
     <div class="flexBox" id="page1" style="flex-direction: column;">
-        <button class="navButton grow" onclick="switchPage(0)">Home Page</button>
+        <button class="navButton grow" onclick="switchSubPage(1)">gwa</button>
+    </div>
+    <div class="flexBox" id="subPage1" style="flex-direction: column">
+        <img src="images/gwa.png">
     </div>
     <div class="flexBox" id="page2" style="flex-direction: column;">
-        <button class="navButton grow" onclick="switchPage(0)">Home Page</button>
     </div>
     <div class="flexBox" id="page3" style="flex-direction: column;">
-        <button class="navButton grow" onclick="switchPage(0)">Home Page</button>
     </div>
 </div>
 </body>
