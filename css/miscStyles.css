@@ -1,7 +1,9 @@
 html{
     background-color: black;
 }
-body{
+img{
+    width: 7%;
+    height: 5%;
 }
 @font-face {
     font-family: 'DosisBold';

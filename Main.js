@@ -2,14 +2,13 @@ let currentPage = 0
 let previousPage = 0
 let currentSubPage = 0
 let pageNumbers = [`0`,`1`,`2`,`3`,]
-let subPageNumbers = [`0`,`1`,]
 const pages = []
 for (let i=0;i<pageNumbers.length;i++){
     pages[i] = document.getElementById(`page${pageNumbers[i]}`)
 }
 const subPages = []
-for (let i=0;i<subPageNumbers.length;i++){
-    subPages[i] = document.getElementById(`subPage${subPageNumbers[i]}`)
+for (let i=0;i<42;i++){
+    subPages[i] = document.getElementById(`subPage${i}`)
 }
 function switchPage(x){
     pages[currentPage].style.display = `none`
