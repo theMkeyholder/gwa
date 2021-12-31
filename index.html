@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <script defer src="Main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/miscStyles.css" />
     <link rel="stylesheet" type="text/css" href="css/classStyles.css" />
     <link rel="stylesheet" type="text/css" href="css/idStyles.css" />
@@ -11,15 +12,25 @@
 </head>
 <body>
 <div class="layer" id="topLayer">
-    <div class="flexBox" id="landingPage" style="flex-direction: column;">
+    <div class="flexBox" id="page0" style="flex-direction: column;">
         <div class="flexBox" id="landingTextsContainer" style="flex-direction: column">
             <t class="generalTexts" id="landingText" style="margin-top:10px;font-family:DosisBold;font-size:20px">Welcome to The Official gwa Site!</t>
             <t class="generalTexts" id="landingText2" style="margin-top:3px;font-family:DosisBold;">For all your gwa needs...</t>
         </div>
         <div class="flexBox" id="navButtonsContainer" style="flex-direction: row;margin-top: 50px;">
-            <button class="navButton grow" id="gwaTypesNav">gwa And gwa Variations</button>
-            <button class="navButton grow" id="gwaEUNav">gwa Expanded Universe</button>
+            <button class="navButton grow" id="gwaTypesNav" onclick="switchPage(1)">gwa And gwa Variations</button>
+            <button class="navButton grow" id="historyNav" onclick="switchPage(2)">gwa History</button>
+            <button class="navButton grow" id="gwaEUNav" onclick="switchPage(3)">gwa Expanded Universe</button>
         </div>
+    </div>
+    <div class="flexBox" id="page1" style="flex-direction: column;">
+        <button class="navButton grow" onclick="switchPage(0)">Home Page</button>
+    </div>
+    <div class="flexBox" id="page2" style="flex-direction: column;">
+        <button class="navButton grow" onclick="switchPage(0)">Home Page</button>
+    </div>
+    <div class="flexBox" id="page3" style="flex-direction: column;">
+        <button class="navButton grow" onclick="switchPage(0)">Home Page</button>
     </div>
 </div>
 </body>
